@@ -1,0 +1,55 @@
+.movie-container {
+  max-width: 286px;
+
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
+
+  img {
+    height: 377px;
+    width: 254px;
+    transition: .2s;
+
+    &:hover {
+      filter: grayscale(80%);
+    }
+  }
+
+  button {
+    opacity: 0;
+    box-shadow: 3px 3px 5px -1px #424d59;
+    transition: opacity .2s ease-in-out;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    right: 4px;
+    top: 4px;
+    &.fav-btn {
+    }
+    &.remove-btn {
+    }
+    .svg-inline--fa {
+      top: 2px;
+      right: 1px;
+      position: relative;
+    }
+  }
+
+  .card-body {
+    padding: 0.6rem 0.8em;
+
+    .card-text {
+      .fa-imdb {
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+      }
+    }
+    a {
+      color: #1f1f1f;
+    }
+  }
+}

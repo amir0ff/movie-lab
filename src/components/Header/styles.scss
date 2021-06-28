@@ -1,0 +1,45 @@
+.header {
+  background-color: #1f1f1f;
+
+  .logo {
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .brand {
+    cursor: default;
+    margin-left: 38px;
+
+    a {
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+.dropdown-menu {
+  border-radius: 0;
+
+  .dropdown-item {
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    .svg-inline--fa {
+      top: 1px;
+      margin-right: 2px;
+      position: relative;
+    }
+
+    &:first-of-type {
+      .svg-inline--fa {
+        margin-right: 6px;
+      }
+
+    }
+  }
+}
+

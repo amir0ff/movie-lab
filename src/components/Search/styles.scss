@@ -1,0 +1,20 @@
+.search-container {
+  input {
+    padding-right: 34px;
+  }
+  .error-message {
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
+  }
+  .spinner-border {
+    color: #288594;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+    z-index: 3;
+  }
+}

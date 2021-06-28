@@ -1,0 +1,37 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: white;
+  transition: color .2s ease-in-out;
+  font-weight: 300;
+
+  &:hover {
+    color: #2fb6cc;
+    text-decoration: none;
+  }
+
+  &.active {
+    font-weight: 500;
+    color: #2fb6cc;
+  }
+}
+
+.btn-info {
+  font-weight: 300;
+  background-color: #2fb6cc;
+}
+
+.invalid-feedback {
+  display: block;
+  min-height: 17px;
+}

@@ -1,0 +1,24 @@
+.login-container {
+  max-width: 728px;
+  button {
+    min-width: 56px;
+  }
+}
+
+.storage-container {
+  position: relative;
+  top: 24px;
+  label {
+    font-weight: 300;
+    font-size: 0.8rem;
+
+    &.text-label {
+      margin-bottom: 4px !important;
+    }
+
+    input {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
