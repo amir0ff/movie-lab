@@ -51,10 +51,13 @@ export function useForm(formSchema: FormSchemaType, formSubmitCallback: () => vo
           const errorMessage: ErrorType = inputValue ? validatorMessage : requiredMessage;
           error = _validatorFunc(inputValue, values) ? errorMessage : clearMessage;
         }
-        setErrors((errors: ErrorsType) => ({
-          ...errors,
-          [inputName]: error,
-        }));
+        if (errors[inputName].message !== error.message) {
+          // proceed only after comparing previous error message value and current value
+          setErrors((errors: ErrorsType) => ({
+            ...errors,
+            [inputName]: error,
+          }));
+        }
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -97,16 +100,19 @@ export function useForm(formSchema: FormSchemaType, formSubmitCallback: () => vo
       const inputName = event.target.name;
       const inputValue = event.target.value;
 
-      // proceed only if the change input exits in the formSchema
       if (formSchema[inputName]) {
+        // proceed only if the change input exits in the formSchema
         setValues((values: ValuesType) => ({
           ...values,
           [inputName]: inputValue,
         }));
-        setIsDirty((_isDirty: IsDirtyType) => ({
-          ..._isDirty,
-          [inputName]: true,
-        }));
+        if (_isDirty[inputName] === false) {
+          // proceed only if input field is not dirty
+          setIsDirty((_isDirty: IsDirtyType) => ({
+            ..._isDirty,
+            [inputName]: true,
+          }));
+        }
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -159,7 +165,7 @@ function initializeState(formSchema: FormSchemaType, state: string) {
         return dirtyInputs;
       }, {});
     case '_isRequired':
-      // requiredInputs is set to any because it's undefined on 1st render
+      // requiredInputs is set to any because {_isRequired} is read-only and initially undefined
       return Object.keys(formSchema).reduce((requiredInputs: any, inputName: string) => {
         requiredInputs[inputName] = formSchema[inputName]['required'];
         return requiredInputs;
