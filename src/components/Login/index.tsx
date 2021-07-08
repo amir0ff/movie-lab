@@ -1,8 +1,8 @@
 import React, { ReactElement, useContext, useEffect, useRef, useState } from 'react';
 import { Button, Col, Container, Form, Row, Spinner, ToggleButton } from 'react-bootstrap';
 import './styles.scss';
-import { useForm } from '../../utils/hooks/useForm';
-import { formSchema, FormValuesInterface } from './formSchema';
+import { useForm, ValuesType } from 'reactjs-use-form';
+import { formSchema } from './formSchema';
 import { globalContext } from '../../store';
 
 export function Login(): ReactElement {
@@ -15,7 +15,7 @@ export function Login(): ReactElement {
   const emailInputRef = useRef<HTMLInputElement>(null);
   const { values, errors, handleOnChange, handleOnSubmit, isDisabled } = useForm(formSchema, handleLogin);
 
-  const { email, passphrase }: FormValuesInterface = values;
+  const { email, passphrase }: ValuesType = values;
 
   useEffect(() => {
     if (emailInputRef.current) emailInputRef.current.focus();
@@ -36,7 +36,7 @@ export function Login(): ReactElement {
   }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    dispatch({ type: 'SET_PERSISTENCE', payload: event.target.value });
+    dispatch({ type: 'SET_PERSISTENCE', payload: event.currentTarget.value });
   }
 
   return (

@@ -1,9 +1,4 @@
-import { FormSchemaType } from '../../utils/hooks/useForm/types';
-
-export interface FormValuesInterface {
-  email: string;
-  passphrase: string;
-}
+import { FormSchemaType } from 'reactjs-use-form';
 
 export const formSchema: FormSchemaType = {
   email: {
