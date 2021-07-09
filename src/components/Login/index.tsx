@@ -2,7 +2,7 @@ import React, { ReactElement, useContext, useEffect, useRef, useState } from 're
 import { Button, Col, Container, Form, Row, Spinner, ToggleButton } from 'react-bootstrap';
 import './styles.scss';
 import { useForm, ValuesType } from 'reactjs-use-form';
-import { formSchema } from './formSchema';
+import { formModel } from './formModel';
 import { globalContext } from '../../store';
 
 export function Login(): ReactElement {
@@ -13,7 +13,7 @@ export function Login(): ReactElement {
     { name: 'Local', value: 'localStorage' },
   ];
   const emailInputRef = useRef<HTMLInputElement>(null);
-  const { values, errors, handleOnChange, handleOnSubmit, isDisabled } = useForm(formSchema, handleLogin);
+  const { values, errors, handleOnChange, handleOnSubmit, isDisabled } = useForm(formModel, handleLogin);
 
   const { email, passphrase }: ValuesType = values;
 

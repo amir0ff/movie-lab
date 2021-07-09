@@ -1,6 +1,6 @@
-import { FormSchemaType } from 'reactjs-use-form';
+import { FormModelType } from 'reactjs-use-form';
 
-export const formSchema: FormSchemaType = {
+export const formModel: FormModelType = {
   email: {
     value: '',
     required: true,
