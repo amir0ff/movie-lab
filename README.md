@@ -7,7 +7,6 @@ This is a movies library app utilizing the OMDb API
 * [Search/index.tsx](https://github.com/amiroff157/movie-lab/blob/main/src/components/Search/index.tsx)
 * [Movie/index.tsx](https://github.com/amiroff157/movie-lab/blob/main/src/components/Movies/components/Movie/index.tsx)
 * [store/index.tsx](https://github.com/amiroff157/movie-lab/blob/main/src/store/index.tsx)
-* [useForm/index.ts](https://github.com/amiroff157/movie-lab/blob/main/src/utils/hooks/useForm/index.ts)
 
 #### Tools used:
 * React (v17.0.2)
