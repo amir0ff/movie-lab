@@ -1,5 +1,5 @@
 # 🎥 MovieLab
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d0411786-8a34-433a-8874-13f92c0f5c6d/deploy-status)](https://app.netlify.com/sites/movie-lab/deploys)
+[![Build & Deploy](https://github.com/amiroff157/movie-lab/actions/workflows/node.yml/badge.svg)](https://github.com/amiroff157/movie-lab/actions/workflows/node.yml)
 
 This is a movies library app utilizing the OMDb API
 
@@ -13,8 +13,6 @@ This is a movies library app utilizing the OMDb API
 * Bootstrap (v4.6.0)
 * axios (v0.21.1)
 
-### Hosted and deployed by
+### License
 
-Netlify: [https://movie-lab.netlify.app/](https://movie-lab.netlify.app/)
-
-[![Continuous Deployment by](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://movie-lab.netlify.app/)
+![GitHub](https://img.shields.io/github/license/amiroff157/reactjs-use-form?color=blue)
