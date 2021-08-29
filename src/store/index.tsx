@@ -11,8 +11,8 @@ export function GlobalStore({ children }: { children: ReactNode }): ReactElement
 
   useEffect(() => {
     /*
-     populate either sessionStorage or localStorage data from globalState based on persistenceType
-     and purge sessionStorage or localStorage globalState key/value pair when either is selected
+     populate either sessionStorage or localStorage data from globalState based on
+     persistenceType and purge sessionStorage or localStorage when either is selected
     */
     const getPersistenceType = globalState.persistenceType;
     if (getPersistenceType === 'sessionStorage') {
