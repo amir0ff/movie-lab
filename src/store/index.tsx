@@ -39,7 +39,7 @@ export const initialState: GlobalStateInterface = {
 function initializeState() {
   /*
    the order in which the the data is compared is very important;
-   first try to populate the state from Storage if not set load initialState
+   first try to populate the state from Storage if not return initialState
   */
   const fromLocalStorage = JSON.parse(localStorage.getItem('globalState') as string);
   const fromSessionStorage = JSON.parse(sessionStorage.getItem('globalState') as string);
