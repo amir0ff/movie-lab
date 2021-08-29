@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/movie-lab/static/css/main.865591b4.chunk.css",
-    "main.js": "/movie-lab/static/js/main.bac434c3.chunk.js",
-    "main.js.map": "/movie-lab/static/js/main.bac434c3.chunk.js.map",
+    "main.js": "/movie-lab/static/js/main.28d2de46.chunk.js",
+    "main.js.map": "/movie-lab/static/js/main.28d2de46.chunk.js.map",
     "runtime-main.js": "/movie-lab/static/js/runtime-main.2a77ed6e.js",
     "runtime-main.js.map": "/movie-lab/static/js/runtime-main.2a77ed6e.js.map",
     "static/js/2.4729edfc.chunk.js": "/movie-lab/static/js/2.4729edfc.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2a77ed6e.js",
     "static/js/2.4729edfc.chunk.js",
     "static/css/main.865591b4.chunk.css",
-    "static/js/main.bac434c3.chunk.js"
+    "static/js/main.28d2de46.chunk.js"
   ]
 }
