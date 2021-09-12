@@ -15,7 +15,7 @@ export function Search(): ReactElement {
     // debounce the GET request by some time before the user decides the search term
     // as the user types the states gets updated and clears the previous set timer
     const withDebounce = setTimeout(() => {
-      if (searchTerm !== cachedSearchTerm) {
+      if (searchTerm !== cachedSearchTerm && searchTerm !== '') {
         return getMovie(searchTerm);
       }
     }, 600);
