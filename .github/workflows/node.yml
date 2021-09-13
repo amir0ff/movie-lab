@@ -20,7 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       API_KEY: ${{ secrets.API_KEY }}
-      INPUT_TOKEN: ''
     strategy:
       matrix:
         node-version: [ 14.x ]
