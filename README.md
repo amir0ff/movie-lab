@@ -15,4 +15,4 @@ This is a movies library app utilizing the OMDb API
 
 ### License
 
-![GitHub](https://img.shields.io/github/license/amiroff157/reactjs-use-form?color=blue)
+![GitHub](https://img.shields.io/github/license/amiroff157/movie-lab?color=blue)
