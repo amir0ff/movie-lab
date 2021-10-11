@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext } from 'react';
-import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { Search } from '../components/Search';
 import { Favorites } from '../components/Favorites';
@@ -15,6 +15,7 @@ export function RouterView(): ReactElement {
 
   return (
     <Container fluid className="p-0">
+      <HashRouter>
         <Header />
         <Switch>
           <Route exact path="/">
@@ -26,6 +27,7 @@ export function RouterView(): ReactElement {
             {globalState.isUserAuthenticated ? <Redirect to="/favorites" from={pathname} /> : <Login />}
           </Route>
         </Switch>
+      </HashRouter>
     </Container>
   );
 }
