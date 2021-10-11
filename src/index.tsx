@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/globalStylesheet.scss';
 import { GlobalStore } from './store';
 import { RouterView } from './router/RouterView';
@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStore>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <RouterView />
-      </BrowserRouter>
+      </Router>
     </GlobalStore>
   </React.StrictMode>,
   document.getElementById('root'),
